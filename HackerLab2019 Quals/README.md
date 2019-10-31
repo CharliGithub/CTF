@@ -290,7 +290,7 @@ Ce texte obtenu représente donc la **clé du challenge**.
 **2ème méthode**: ```Cutter``` <br>
 On charge le binaire dans ```cutter```. Dans la fonction **main()**, on analyse le code désassemblé. Au cours de l’analyse, on remarque la présence de quelques chaînes de caratères avant l’affichage de **```Entrer le flag```**.  
 ![Cutter - main](Images/cutter-flag.png)  
-On se met à la trousse de ces derniers, puis on à le texte suivant : **CTF You are close enough.**  
+On se met à la trousse de ces derniers, puis on a le texte suivant : **CTF You are close enough.**  
 
 ---
 Après réexéction de l'exécutable ```qualif```, nous mettons "**CTF You are close enough.**" comme **```flag```**. De façon exceptionnelle, nous avions pu nous enregistrer pour la phase finale du **```#Hackerlab2019```**.
