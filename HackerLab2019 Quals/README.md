@@ -177,7 +177,7 @@ Size:       14832
 Compressed: 4469
 ```
 
-### 3ème Etape: Reverse Engeneering
+### 3ème Etape: Reverse Engineering
 Après décompression du fichier ```qualif.zip```, on n'y retrouve un binaire nommé ```qualif```. Essayons d'avoir plus d'informations dessus. 
 ```console
 root@Y3HW3_Hack3r:~/HackerLab2019# file qualif
