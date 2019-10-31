@@ -279,3 +279,9 @@ root@Y3HW3_Hack3r:~/HackerLab2019# python brute_reverse.py
 CTF You are close enough.
 ```
 Après réexécution de l'exécutable ```qualif```, nous mettons le texte obtenu après décodage comme **```flag```**. De façon exceptionnel, ce texte nous a permis de nous enregistrer pour la phase finale du **```#Hackerlab2019```**.
+
+## Authors
+* **Eliphélé AGOSSOU** *[@charliagossou](https://twitter.com/charliagossou)*
+* **Ezéchiel DADJO** *[@zeck_bido](https://twitter.com/zeck_bido)*
+* **Fabrice YARAKOU** *[@YarakouF](https://twitter.com/YarakouF)*
+* **Raymond SODJI** *[@Ray_Sdj](https://twitter.com/Ray_Sdj)*
