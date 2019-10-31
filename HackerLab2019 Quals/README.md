@@ -147,7 +147,7 @@ root@Y3HW3_Hack3r:~/HackerLab2019# python hash.py
 En moins de 5**s**, nous retrouvons notre fameux mot de passe __Amazone2017BJ__.  
 <bR />
 2ème méthode : ```Hashcat``` <br />
-Il existe un autre outil très performant réputé pour bruteforcer des ```hash```. Il s'agit du très célèbre __hahcat__(https://github.com/hashcat/hashcat). Pour retrouver le mot de passe de l'archive, exécutons la commande ci-dessous.
+Il existe un autre outil très performant réputé pour bruteforcer des ```hash```. Il s'agit du très célèbre __hahcat__(https://github.com/hashcat/hashcat). Dans ce conexte-ci, la commande qui pourrait être utilisé est :
 ```console
 root@Y3HW3_Hack3r:~/HackerLab2019# hashcat -a 3 -m 1400 hash.txt ?u?l?l?l?l?l?l2017BJ --force
 ```
