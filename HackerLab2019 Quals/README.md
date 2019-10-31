@@ -107,7 +107,7 @@ Analyzing '8d920857a80c355d99c8599e8e3df578e76b1899c686207d99020b4eff2538f9'
 [+] Skein-512(256)
 ```
 On a donc affaire à un ```SHA-256```. <br />
-**1ère méthode** : ```Hasher``` <br />
+*1ère méthode* : ```Hasher``` 
 Après quelques recherches, nous tombons sur un célèbre outil  __hasher__(https://github.com/CiKu370/hasher) qui pourrait en un rien de temps cracker le fameux ```hash```, juste qu'il faudrait préalablement disposer d'un dictionnaire de mot de passe adéquat. L'étape suivante, consistera donc à formater un dictionnaire en se basant sur les différentes possibilités de formes que peut prendre la chaîne ```flag```. Les outils tels que ```awk```, ```sed```, ```grep``` seront utilisés pour effectuer ce formatage. 
 ```console
 root@Y3HW3_Hack3r:~/HackerLab2019# awk 'length($1) == 7 { print $1 }' /usr/share/wordlists/rockyou.txt | grep -a -v '[^A-Z^a-z]' | sed 's/./\u&/' |sed 's/$/2017BJ/' > wordlist.txt
@@ -148,12 +148,12 @@ root@Y3HW3_Hack3r:~/HackerLab2019# python hash.py
 ```
 En moins de 5**s**, nous retrouvons notre fameux mot de passe __Amazone2017BJ__.  
 <bR />
-**2ème méthode** : ```Hashcat``` <br />
+*2ème méthode* : ```Hashcat``` <br />
 Il existe un autre outil très performant réputé pour bruteforcer des ```hash```. Il s'agit du très célèbre __hahcat__(https://github.com/hashcat/hashcat). Dans ce conexte-ci, la commande qui pourrait être utilisé est :
 ```console
 root@Y3HW3_Hack3r:~/HackerLab2019# hashcat -a 3 -m 1400 hash.txt ?u?l?l?l?l?l?l2017BJ --force
 ```
-**```NB```**: ```hash.txt``` contient le hash donné en indice.  
+```NB```: ```hash.txt``` contient le hash donné en indice.  
 
 <br />
 Ayant donc le mot de passe de l'archive ```qualif.zip```, nous allons extraire les différents fichiers qui s'y retrouvent.
