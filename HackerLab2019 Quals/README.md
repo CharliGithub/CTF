@@ -13,16 +13,16 @@ L’accèss au lien du challenge https://bit.ly/2oW96UH (http://qualif.hackerlab
 
 Une fois ouvert, allons dans l’onglet ```Statistiques > Hiérarchie des Protocoles``` pour connaître les protocoles utilisés.
 
-![Interface de Wireshark](Images/wireshark-stats.png)
+![Interface de Wireshark - stats ](Images/wireshark-stats.png)
 
 Dans la liste de ces protocoles, nous repérons le protocole FTP. On pourrait donc conclure sur une connexion probable à un serveur de fichier. Allons chercher un peu plus d’informations sur les échanges éffectués avec ce protocole.
 > Sélectionner File Transfer Protocol (FTP) > Clique droit > Appliquer comme un Filtre > Sélectionné
 
-![Interface de Wireshark](Images/wireshark-ftp-filter.png)
+![Interface de Wireshark - stats - filter](Images/wireshark-ftp-filter.png)
 
 Après l’affichage des différents échanges, faisons sur la première ligne un ```clique droit > Suivre > Flux TCP```. On voit donc apparaître une fenêtre renseignant sur les **credentials** utilisés pour la connexion au serveur ```FTP```. 
 
-![Interface de Wireshark](Images/wireshark-ftp-credentials.png)
+![Interface de Wireshark - follow stream](Images/wireshark-ftp-credentials.png)
 
 Ayant l’adresse **IP** du serveur FTP : ```51.91.120.156``` , un username : **cyberops** puis un password : **vzeiof34deTRD**, nous pouvons maintenant nous connecter au **serveur FTP**, question de voir ce qui s'y trouve.
 ```console
@@ -106,7 +106,10 @@ Analyzing '8d920857a80c355d99c8599e8e3df578e76b1899c686207d99020b4eff2538f9'
 [+] Skein-256 
 [+] Skein-512(256)
 ```
-On a donc affaire à un ```SHA-256```. Après quelques recherches, nous tombons sur un célèbre outil  __hasher__(https://github.com/CiKu370/hasher) qui pourrait en un rien de temps cracker le fameux ```hash```, juste qu'il faudrait préalablement disposer d'un dictionnaire de mot de passe adéquat. L'étape suivante, consistera donc à formater un dictionnaire en se basant sur les différentes possibilités de formes que peut prendre la chaîne ```flag```. Les outils tels que ```awk```, ```sed```, ```grep``` seront utilisés pour effectuer ce formatage. 
+On a donc affaire à un ```SHA-256```.  
+<br>
+**1ère méthode**: ```Hasher``` <br>
+Après quelques recherches, nous tombons sur un célèbre outil  __hasher__(https://github.com/CiKu370/hasher) qui pourrait en un rien de temps cracker le fameux ```hash```, juste qu'il faudrait préalablement disposer d'un dictionnaire de mot de passe adéquat. L'étape suivante, consistera donc à formater un dictionnaire en se basant sur les différentes possibilités de formes que peut prendre la chaîne ```flag```. Les outils tels que ```awk```, ```sed```, ```grep``` seront utilisés pour effectuer ce formatage. 
 ```console
 root@Y3HW3_Hack3r:~/HackerLab2019# awk 'length($1) == 7 { print $1 }' /usr/share/wordlists/rockyou.txt | grep -a -v '[^A-Z^a-z]' | sed 's/./\u&/' |sed 's/$/2017BJ/' > wordlist.txt
 ```
@@ -146,7 +149,7 @@ root@Y3HW3_Hack3r:~/HackerLab2019# python hash.py
 ```
 En moins de 5**s**, nous retrouvons notre fameux mot de passe __Amazone2017BJ__.  
 <bR />
-*2ème méthode* : ```Hashcat``` <br />
+**2ème méthode** : ```Hashcat``` <br>
 Il existe un autre outil très performant réputé pour bruteforcer des ```hash```. Il s'agit du très célèbre __hahcat__(https://github.com/hashcat/hashcat). Dans ce conexte-ci, la commande qui pourrait être utilisé est :
 ```console
 root@Y3HW3_Hack3r:~/HackerLab2019# hashcat -a 3 -m 1400 hash.txt ?u?l?l?l?l?l?l2017BJ --force
@@ -192,7 +195,11 @@ Entrez votre numero de telephone
 
 Try again!
 ```
-On remarque donc qu'avant de s'enregistrer, faudrait préalablement trouver un certain **```flag```**. Pour accélérer l'analyse du ```binaire```, utilisons un **logiciel de désassemblage d'éxecutable**, pouvant donner une vue assez détaillée du *fonctionnement interne de l'exécutable* et d'un extrait de son ```pseudo code```.    
+
+On remarque donc qu'avant de s'enregistrer, faudrait préalablement trouver un certain **```flag```**.
+
+**1ère méthode** : ```Hopper - Pseudo code - Python pwn module``` <br>
+Pour accélérer l'analyse du ```binaire```, utilisons un **logiciel de désassemblage d'éxecutable**, pouvant donner une vue assez détaillée du *fonctionnement interne de l'exécutable* et d'un extrait de son ```pseudo code```.    
 Voici l'extrait du **```pseudo code```** de la fonction **main()** de l'éxécutable **```qualif```** obtenu avec le logiciel **```Hopper```**.
 ```
 int main() {
@@ -278,10 +285,17 @@ Ce script fait usage du module pwn de python 2. L'éxécution du script donne un
 root@Y3HW3_Hack3r:~/HackerLab2019# python brute_reverse.py
 CTF You are close enough.
 ```
-Après réexécution de l'exécutable ```qualif```, nous mettons le texte obtenu après décodage comme **```flag```**. De façon exceptionnel, ce texte nous a permis de nous enregistrer pour la phase finale du **```#Hackerlab2019```**.
+Ce texte obtenu représente donc la **clé du challenge**. 
 
+**2ème méthode**: ```Cutter``` <br>
+On charge le binaire dans ```cutter```. Dans la fonction **main()**, on analyse le code désassemblé. Au cours de l’analyse, on remarque la présence de quelques chaînes de caratères avant l’affichage de **```Entrer le flag```**.  
+![Cutter - main](Images/cutter-flag.png)  
+On se met à la trousse de ces derniers, puis on à le texte suivant : **CTF You are close enough**.  
+
+---
+Après réexéction de l'exécutable ```qualif```, nous mettons "**CTF You are close enough**" comme **```flag```**. De façon exceptionnel, nous avions pu nous enregistrer pour la phase finale du **```#Hackerlab2019```**.
 ## Authors
-* **Eliphélé AGOSSOU** *[@charliagossou](https://twitter.com/charliagossou)*
-* **Ezéchiel DADJO** *[@zeck_bido](https://twitter.com/zeck_bido)*
-* **Fabrice YARAKOU** *[@YarakouF](https://twitter.com/YarakouF)*
-* **Raymond SODJI** *[@Ray_Sdj](https://twitter.com/Ray_Sdj)*
+* **Eliphélé AGOSSOU -- charliepy** *[@charliagossou](https://twitter.com/charliagossou)*
+* **Ezéchiel DADJO -- incognito** *[@zeck_bido](https://twitter.com/zeck_bido)*
+* **Fabrice YARAKOU -- Fabmystik** *[@YarakouF](https://twitter.com/YarakouF)*
+* **Raymond SODJI -- Unkn0wn** *[@Ray_Sdj](https://twitter.com/Ray_Sdj)*
