@@ -150,7 +150,7 @@ root@Y3HW3_Hack3r:~/HackerLab2019# python hash.py
 En moins de 5**s**, nous retrouvons notre fameux mot de passe __Amazone2017BJ__.  
 <bR />
 **2ème méthode** : ```Hashcat``` <br>
-Il existe un autre outil très performant réputé pour bruteforcer des ```hash```. Il s'agit du très célèbre __hahcat__(https://github.com/hashcat/hashcat). Dans ce conexte-ci, la commande qui pourrait être utilisé est :
+Il existe un autre outil très performant réputé pour bruteforcer des ```hash```. Il s'agit du très célèbre __hashcat__(https://github.com/hashcat/hashcat). Dans ce conexte-ci, la commande qui pourrait être utilisé est :
 ```console
 root@Y3HW3_Hack3r:~/HackerLab2019# hashcat -a 3 -m 1400 hash.txt ?u?l?l?l?l?l?l2017BJ --force
 ```
@@ -294,7 +294,7 @@ On se met à la trousse de ces derniers, puis on à le texte suivant : **CTF Yo
 
 ---
 Après réexéction de l'exécutable ```qualif```, nous mettons "**CTF You are close enough**" comme **```flag```**. De façon exceptionnel, nous avions pu nous enregistrer pour la phase finale du **```#Hackerlab2019```**.
-## Authors
+## Authors -- Y3HW3_H4CK3R
 * **Eliphélé AGOSSOU -- charliepy** *[@charliagossou](https://twitter.com/charliagossou)*
 * **Ezéchiel DADJO -- incognito** *[@zeck_bido](https://twitter.com/zeck_bido)*
 * **Fabrice YARAKOU -- Fabmystik** *[@YarakouF](https://twitter.com/YarakouF)*
