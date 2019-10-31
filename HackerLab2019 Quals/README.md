@@ -278,4 +278,4 @@ Ce script fait usage du module pwn de python 2. L'éxécution du script donne un
 root@Y3HW3_Hack3r:~/HackerLab2019# python brute_reverse.py
 CTF You are close enough.
 ```
-Après réexéction de l'exécutable ```qualif```, nous mettons le texte obtenu après décodage comme **```flag```**. De façon exceptionnel, ce texte nous a permis de nous enregistrer pour la phase finale du **```#Hackerlab2019```**.
+Après réexécution de l'exécutable ```qualif```, nous mettons le texte obtenu après décodage comme **```flag```**. De façon exceptionnel, ce texte nous a permis de nous enregistrer pour la phase finale du **```#Hackerlab2019```**.
