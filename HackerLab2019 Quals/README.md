@@ -1,7 +1,7 @@
 # HackerLab2019
 > Write-up de la phase de préselection !
 ---
-![HackerLab2019](Images/hackerlab.jpg)
+![Interface de Wireshark](Images/hackerlab.jpg)
 ## Challenge : Tweet de @Anssi_Benin : 12:14 Pm - 01 Octobre 2019
 >Etudiants, curieux, auto-didactes, professionnels de l'informatique, les qualifs du ```#HackerLab2019``` commencent maintenant. Soyez parmi les 100 premiers à valider le flag. Formez votre team entrez dans la bagarre.
 [bit.ly/2oW96UH](https://bit.ly/2oW96UH)
@@ -13,16 +13,16 @@ L’accèss au lien du challenge https://bit.ly/2oW96UH (http://qualif.hackerlab
 
 Une fois ouvert, allons dans l’onglet ```Statistiques > Hiérarchie des Protocoles``` pour connaître les protocoles utilisés.
 
-![Interface de Wireshark - Stats ](Images/wireshark-stats.png)
+![Interface de Wireshark](Images/wireshark-stats.png)
 
 Dans la liste de ces protocoles, nous repérons le protocole FTP. On pourrait donc conclure sur une connexion probable à un serveur de fichier. Allons chercher un peu plus d’informations sur les échanges éffectués avec ce protocole.
 > Sélectionner File Transfer Protocol (FTP) > Clique droit > Appliquer comme un Filtre > Sélectionné
 
-![Interface de Wireshark - Stats filtering](Images/wireshark-ftp-filter.png)
+![Interface de Wireshark](Images/wireshark-ftp-filter.png)
 
 Après l’affichage des différents échanges, faisons sur la première ligne un ```clique droit > Suivre > Flux TCP```. On voit donc apparaître une fenêtre renseignant sur les **credentials** utilisés pour la connexion au serveur ```FTP```. 
 
-![Interface de Wireshark - Stream following](Images/wireshark-ftp-credentials.png)
+![Interface de Wireshark](Images/wireshark-ftp-credentials.png)
 
 Ayant l’adresse **IP** du serveur FTP : ```51.91.120.156``` , un username : **cyberops** puis un password : **vzeiof34deTRD**, nous pouvons maintenant nous connecter au **serveur FTP**, question de voir ce qui s'y trouve.
 ```console
@@ -144,7 +144,16 @@ root@Y3HW3_Hack3r:~/HackerLab2019# python hash.py
 [=] password found 
 [+] 8d920857a80c355d99c8599e8e3df578e76b1899c686207d99020b4eff2538f9 0={==> Amazone2017BJ
 ```
-En moins de 5**s**, nous retrouvons notre fameux mot de passe __Amazone2017BJ__. En avant donc pour le dézippage du fichier ```qualif.zip```.
+En moins de 5**s**, nous retrouvons notre fameux mot de passe __Amazone2017BJ__.  
+<bR />
+2ème méthode : ```Hashcat``` <br />
+Il existe un autre outil très performant réputé pour bruteforcer des ```hash```. Il s'agit du très célèbre __hahcat__(https://github.com/hashcat/hashcat). Pour retrouver le mot de passe de l'archive, exécutons la commande ci-dessous.
+```console
+root@Y3HW3_Hack3r:~/HackerLab2019# hashcat -a 3 -m 1400 hash.txt ?u?l?l?l?l?l?l2017BJ --force
+```
+*```NB```*: ```hash.txt``` contient le hash donné en indice.
+<br />
+Ayant donc le mot de passe de l'archive ```qualif.zip```, nous allons extraire les différents fichiers qui s'y retrouvent.
 ```console
 root@Y3HW3_Hack3r:~/HackerLab2019# 7z x qualif.zip -aoa -PAmazone2017BJ
 7-Zip [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
