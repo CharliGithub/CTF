@@ -7,7 +7,7 @@
 9ed6c336c58699768ee0ff4782532203a06f541aec022015d8fa4b23813a36d5
 Précédez la réponse de CTF_
 
-Dans cette épreuve, nous sommes amenés à retrouver la chaîne de caractères ayant pour ```hash``` 9ed6c336c58699768ee0ff4782532203a06f541aec022015d8fa4b23813a36d5. Pour aller rapidement, on fera usage du célèbre logiciel ```buster``` (https://github.com/s0md3v/Hash-Buster), réputé pour le bruteforce des ```hash```.
+Dans cette épreuve, nous sommes amenés à retrouver la chaîne de caractères ayant pour ```hash``` **9ed6c336c58699768ee0ff4782532203a06f541aec022015d8fa4b23813a36d5**. Pour aller rapidement, on fera usage du célèbre logiciel ```buster``` (https://github.com/s0md3v/Hash-Buster), réputé pour le bruteforce des ```hash```.
 
 ```console
 root@Y3HW3_H4CK3R:~/HackerLab2019# buster -s 9ed6c336c58699768ee0ff4782532203a06f541aec022015d8fa4b23813a36d5
