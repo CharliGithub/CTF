@@ -11,7 +11,7 @@ root@Y3HW3_Hack3r:~/HackerLab2019# wc -l url_list
 27849 url_list
 ```
 
-Il serait carrément fastidieux pour nous, de tester la sortie de tous les URLs contenues dans ce fichier. Le premier réflèxe a été de ressortir les URLs non dupliquées du fichier, c'est-à-dire ceux qui apparaissent une et une seule fois. Pour le faire, exécutons la commande ci-dessous :
+Il serait carrément fastidieux pour nous, de tester la sortie de toutes les URLs contenues dans ce fichier. Le premier réflèxe a été de ressortir les URLs non dupliquées du fichier, c'est-à-dire ceux qui apparaissent une et une seule fois. Pour le faire, exécutons la commande ci-dessous :
 
 ```console
 root@Y3HW3_Hack3r:~/HackerLab2019# sort url_list | uniq -u
