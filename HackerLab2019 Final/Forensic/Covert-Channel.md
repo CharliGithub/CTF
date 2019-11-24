@@ -60,9 +60,8 @@ root@Y3HW3_Hack3r:~/HackerLab2019# strings allDnsQuery.txt | awk -F "." '{print 
 ```
 
 En décodant le contenu obtenu sur la plateforme https://cryptii.com/pipes/hex-decoder, on fini par trouver ce message : 
-```
-Lorem ipsum dolor sit amet, coLorem ipsum dolor sit amet, consectetur adipiscing elit, sednsectetur adipiscing elit, sed do eiusmod tempor incididunt  do eiusmod tempor incididunt ut labore et dolore magna aliqut labore et dolore magna aliqua. Ut enim ad minim veniam, qua. Ut enim ad minim veniam, quis nostrud exercitation ullamuis nostrud exercitation ullamco laboris nisi ut aliquip ex co laboris nisi ut aliquip ex ea commodo consequat. CTF_Forsea commodo consequat. CTF_ForsensicBuster Duis aute irure doensicBuster Duis aute irure dolor in reprehenderit in voluptlor in reprehenderit in voluptate velit esse cillum dolore eate velit esse cillum dolore eu fugiat nulla pariatur. Excepu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nteur sint occaecat cupidatat non proident, sunt in culpa quion proident, sunt in culpa qui officia deserunt mollit anim  officia deserunt mollit anim id est laborum
+
+> Lorem ipsum dolor sit amet, coLorem ipsum dolor sit amet, consectetur adipiscing elit, sednsectetur adipiscing elit, sed do eiusmod tempor incididunt  do eiusmod tempor incididunt ut labore et dolore magna aliqut labore et dolore magna aliqua. Ut enim ad minim veniam, qua. Ut enim ad minim veniam, quis nostrud exercitation ullamuis nostrud exercitation ullamco laboris nisi ut aliquip ex co laboris nisi ut aliquip ex ea commodo consequat. CTF_Forsea commodo consequat. CTF_ForsensicBuster Duis aute irure doensicBuster Duis aute irure dolor in reprehenderit in voluptlor in reprehenderit in voluptate velit esse cillum dolore eate velit esse cillum dolore eu fugiat nulla pariatur. Excepu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nteur sint occaecat cupidatat non proident, sunt in culpa quion proident, sunt in culpa qui officia deserunt mollit anim  officia deserunt mollit anim id est laborum
 id est laborum
-```
 
 ```Flag ```: **CTF_ForsensicBuster**
