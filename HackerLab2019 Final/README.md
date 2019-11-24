@@ -252,3 +252,9 @@
 		<td>300</td>
 	</tr>
 </table>
+
+## Authors -- Y3HW3_H4CK3R
+* **Eliphélé AGOSSOU -- charliepy** *[@charliagossou](https://twitter.com/charliagossou)*
+* **Ezéchiel DADJO -- incognito** *[@zeck_bido](https://twitter.com/zeck_bido)*
+* **Fabrice YARAKOU -- Fabmystik** *[@YarakouF](https://twitter.com/YarakouF)*
+* **Raymond SODJI -- Unkn0wn** *[@Ray_Sdj](https://twitter.com/Ray_Sdj)*
