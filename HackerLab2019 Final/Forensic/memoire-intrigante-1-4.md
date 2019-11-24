@@ -6,7 +6,9 @@
 > Le bjCSIRT a été dépeché pour assiter l'OCRC lors de la perquisition du domicile du bras droit de DJAKPATAGLO. Arrivé sur les lieux, ils ont fait l'inventaire des objets trouvés. Parmi ces objets, un ordinateur allumé. L'équipe a naturellement procédé à l'acquisition de la mémoire vive de cet ordinateur. Lors de la phase d'analyse, ils ont découvert une connexion étrange. Suivez la !
 
 
-**```NB```**: Le dump de la mémoire vive est téléchargeable sur les clés USB, partagées lors de la phase présentielle de la finale du HackerLab2019. L'objectif du challenge, est d'arriver à retrouver une connexion étrange ayant eu lieu sur l'ordinateur allumé perquisitionné au domicile du bras droit de **DJAKPATAGLO**. Pour mener à bien notre investigation, nous utiliserons un célèbre outil du nom de **Volatility** (https://github.com/volatilityfoundation/volatility) . Commencons d'abord par réccupérer le **profil** du dump, c'est-à-dire l'architecture du système d'exploitation .
+**```NB```**: Le dump de la mémoire vive est téléchargeable sur les clés USB, partagées lors de la phase présentielle de la finale du HackerLab2019. 
+
+L'objectif du challenge, est d'arriver à retrouver une connexion étrange ayant eu lieu sur l'ordinateur allumé perquisitionné au domicile du bras droit de **DJAKPATAGLO**. Pour mener à bien notre investigation, nous utiliserons un célèbre outil du nom de **Volatility** (https://github.com/volatilityfoundation/volatility) . Commencons d'abord par réccupérer le **profil** du dump, c'est-à-dire l'architecture du système d'exploitation .
 
 ```console 
 root@Y3HW3_Hack3r:~/HackerLab2019# volatility -f memdump.mem imageinfo
