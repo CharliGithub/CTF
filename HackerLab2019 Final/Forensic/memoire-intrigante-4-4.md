@@ -1,6 +1,6 @@
 * * *
 # Un mémoire intrigante (4/4)
-> (Forensic, 200 points )
+> (Forensic, 250 points )
 ---
 ## Challenge :
 > Le bjCSIRT a été dépeché pour assiter l'OCRC lors de la perquisition du domicile du bras droit de DJAKPATAGLO. Arrivé sur les lieux, ils ont fait l'inventaire des objets trouvés. Parmi ces objets, un ordinateur allumé. L'équipe a naturellement procédé à l'acquisition de la mémoire vive de ce ordinateur. Lors de l'investigation, ils ont découvert que le suspect préparait un malware dangereux.
