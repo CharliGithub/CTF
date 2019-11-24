@@ -141,7 +141,7 @@ Written 2 byte(s) (jne 0x00000b7e) = wx 7500
 [0x00000b7c]>q
 ```
 Voilà notre programme finalement patché. Pour obtenir le ```flag```, il suffira d'exécuter le programme et mettre un ```input```quelconque.  
-Rappelez-vous qu'au début on a parlé de **<< Question de chance pour ceux qui ont résolu ? Ou défaut de concentration pour notre équipe ? >>**. Certains de ceux qui ont réussi à patcher le programme tel décrit dans ce writeup sauront de quoi on parle. En effet, sur certains systèmes d'exploitation , après un patch du programme, on a des **erreurs de segmentation**. Impossible d'afficher le ```flag```. Chose qui a empêché notre équipe de valider cette épreuve. Mais après la compétition, quelques recherches effectué ont finalement montré que c'était un problème de compilateur. Pour s'éviter donc cette fameuse erreur, il est nécessaire d'éxécuter le programme patché sur un système doté de la version **7.4.0** de **gcc**. Tel, un **Ubuntu 18.04**.
+Rappelez-vous qu'au début on a parlé de **<< Question de chance pour ceux qui ont résolu ? Ou défaut de concentration pour notre équipe ? >>**. Certains de ceux qui ont réussi à patcher le programme tel décrit dans ce writeup sauront de quoi on parle. En effet, sur certains systèmes d'exploitation , après un patch du programme, on a des **erreurs de segmentation**. Impossible d'afficher le ```flag```. Chose qui a empêché notre équipe de valider cette épreuve. Mais après la compétition, quelques recherches effectuées ont finalement montré que c'était un problème de compilateur. Pour s'éviter donc cette fameuse erreur, il est nécessaire d'éxécuter le programme patché sur un système doté de la version **7.4.0** de **gcc**. Tel, un **Ubuntu 18.04**.
 
 <img src="Images/patchme.jpeg">
 
