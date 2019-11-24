@@ -9,7 +9,7 @@ Pour résoudre ce challenge, nous devons d’abord télécharger le fichier nomm
 
 D’après l’énoncé, le code basé sur 41 articles (**base 41**) sera déchiffré si et seulement si on le ramenait dans une base de 10 articles (**base 10**).
 
-Pour effectuer ce déchiffrement, on utilisera un utilitaire en ligne pour connvertir le code contenu dans le fichier de la **base 41** à la **base 10**. 
+Pour effectuer ce déchiffrement, on utilisera un utilitaire en ligne (https://jalu.ch/coding/base_converter.php) pour connvertir le code contenu dans le fichier de la **base 41** à la **base 10**. 
  <table>
  	<thead>
  		<th>Base 41</th>
