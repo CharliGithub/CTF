@@ -62,7 +62,7 @@
 		<td>150</td>
 	</tr>
 	<tr>
-		<td>Convert channel</td>
+		<td>Covert channel</td>
 		<td>Steganography</td>
 		<td>200</td>
 	</tr>
@@ -222,7 +222,7 @@
 		<td>200</td>
 	</tr>
 	<tr>
-		<td>Convert channel </td>
+		<td>Covert channel </td>
 		<td>Forensic</td>
 		<td>200</td>
 	</tr>
