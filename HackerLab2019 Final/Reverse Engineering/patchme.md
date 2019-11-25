@@ -147,4 +147,5 @@ Mais après la compétition, quelques recherches effectuées ont finalement mont
 
 <img src="Images/patchme.jpeg">
 
+Nos sincères remerciements à l'adresse de [@xdeogia](https://twitter.com/angbedji) , pour avoir accepté exécuter notre programme patché sur son système Ubuntu 18.04 .
 ```Flag ```: **CTFALOTOWEDIE**
