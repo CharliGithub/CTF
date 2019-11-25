@@ -123,7 +123,7 @@ root@Y3HW3_Hack3r:~/HackerLab2019# r2 ./patchme
 ``` 
 Après une brève analyse de cette sortie de code assembleur, on peut énumérer ces quelques points :  
 1) A l'adresse ```0x00000b29```, le programme réccupère l'entrée de l'utilisateur.
-2) A l'addresse ```0x00000b75```, la fonction **strcmp** est appelée pour comparer l'entrée de l'utilisateur à une certaine chaîne de caractères.
+2) A l'adresse ```0x00000b75```, la fonction **strcmp** est appelée pour comparer l'entrée de l'utilisateur à une certaine chaîne de caractères.
 3) Lorsque cette comparaison est fausse, le programme **jump** dans le bloc **0xbba**, où le message de sortie est **"Essaie encore""**.
 4) Lorsque cette comparaison est correcte, le programme continue son chemin et entre dans le bloc **0x00000b7c**. A ce niveau une certaine variable est initialisée à **"CWJZRXRXUYNGX"**. Cette variable est passée à une fonction *sub.strlen_953()*
 5) Cette fonction décrypte la chaîne passée en argument suivant un algorithme personnalisée. Ainsi le ```return``` de **sub.strlen_953("CWJZRXRXUYNGX")** serait le ```flag```.  
