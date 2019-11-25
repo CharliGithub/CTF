@@ -79,6 +79,6 @@ Voilà notre **malware** enfin dumpé sous le nom de **executable.2556.exe**. Es
 
 <img src="Images/malware.gif">
 
-On remarque que dans l'onget **Strings (count)** , nous retrouvons notre ```flag```.
+Dans l'onget **Strings (count)** , nous retrouvons notre ```flag```.
 
 ```Flag ```: **CTF_YouWinTheOCRBadge**
