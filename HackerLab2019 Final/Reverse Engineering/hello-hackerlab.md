@@ -5,7 +5,7 @@
 ## Challenge :
 >  [ [hello-hackerlab.crx](File/hello-hackerlab.crx ) ]
 
-Une fois le fichier du challenge téléchargé, on remarque qu'il porte l'extension ```.crx```. Les fichiers avec l’extension ```CRX``` sont des plugins associés au navigateur ```Google Chrome```. Pour comprendre le fonctionnement du plugin, il serait intéressant d'avoir son code source. Pour le faire, nous utiliserons une plateforme web qui se chargera de nous extraire le code source de l'extension. Cette fameuse plateforme est accessible à cette adresse https://crxextractor.com/ .  
+Une fois le fichier du challenge téléchargé, on remarque qu'il porte l'extension ```.crx```. Les fichiers avec l’extension ```CRX``` sont des plugins associés au navigateur ```Google Chrome```. Pour comprendre le fonctionnement du plugin, il serait intéressant d'avoir son code source. Pour l'obtenir, nous utiliserons une plateforme web qui se chargera de nous extraire le code source de l'extension. Cette fameuse plateforme est accessible à cette adresse https://crxextractor.com/ .  
 > Uploader le fichier à extension ```.crx```, puis télécharger le code source 
 
 Après l'avoir fait, vous obtiendrez un fichier zip contenant le code source du plugin ```hello hackerlab```. (<a href="File/hello-hackerlab.zip">hello-hackerlab.zip</a>)
@@ -33,7 +33,7 @@ chrome.app.runtime.onLaunched.addListener(function() {
 });
 
 ```
-On remarque dans le code ```js```, un commenttaire assez suspect. En effet, une suite de code ```hexadécimal``` est passée en argument à la fonction ```console.log()```. Cherchons donc le correspondant ```ascii``` de ce code. 
+On remarque dans le code ```js```, un commentaire assez suspect. En effet, une suite de code ```hexadécimal``` est passée en argument à la fonction ```console.log()```. Cherchons donc le correspondant ```ascii``` de ce code. 
 
 ```console
 root@Y3HW3_Hack3r:~/HackerLab2019# python
