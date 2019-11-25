@@ -176,13 +176,13 @@ Offset(P)          Proto    Local Address                  Foreign Address      
 En examinant minitieusement la sortie du ```netscan```, on fini par retrouver une connexion étrange vers cette adresse ip **51.83.76.195** au port **42000** par l'utilitaire **telnet.exe**. 
 
 Pour obtenir le flag, il a suffit joindre l'hôte **51.83.76.195** au port **42000** avec **telnet** .
-```
-telnet 51.83.76.195 42000
-```
-<!-- 
 
-Essayons aussi de joindre cette adresse au port **42000**  avec l'utitaire ```telnet``` pour examiner la sortie .
-```
+```console
 root@Y3HW3_Hack3r:~/HackerLab2019# telnet 51.83.76.195 42000
-``` -->
-<!-- ```Flag ```: **** -->
+Trying 51.83.76.195...
+Connected to 51.83.76.195.
+Escape character is '^]'.
+
+CTF_ManYouDeserveAHug
+```
+```Flag ```: **CTF_ManYouDeserveAHug** 
