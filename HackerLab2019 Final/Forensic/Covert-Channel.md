@@ -13,7 +13,7 @@ Après extraction du fichier du challenge, on obtient un fichier [ [capture.pcap
 On aperçoit sur l'image des statistiques, ```32``` paquets ```DNS``` et ```804``` paquets ```HTTP```. En fouillant du côté des paquets ```HTTP```, on ne trouva aucune piste pouvant nous aider à retrouver le ```flag```. En fouillant du côté des paquets ```DNS```, on repéra des tentatives de résolutions d'adresses au format ```hexadécimal``` qui ont échouées.
 <img src="Images/convert-stats-2.png">
 
-Essayons maintenant d'extraire toutes les requêtes **DNS** se trouvant dans le fichier [ [capture.pcap](File/capture.pcap) ]. Pour le faire, on utilisera l'utilitaire en ligne de commande de ```wireshark``` qui est bien évidemment le célèbre ```tsark```.
+Essayons maintenant d'extraire toutes les requêtes **DNS** se trouvant dans le fichier [ [capture.pcap](File/capture.pcap) ]. Pour le faire, on utilisera l'utilitaire en ligne de commande de ```wireshark``` qui est bien évidemment le célèbre ```tshark```.
 
 ```console
 root@Y3HW3_Hack3r:~/HackerLab2019# tshark -r capture.pcap -T fields -e dns.qry.name  > allDnsQuery.txt
