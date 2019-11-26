@@ -5,7 +5,7 @@
 ## Challenge :
 > Le système de fichiers NTFS cache des secrets. A toi de le découvrir.  [ [file.rar](File/file.rar ) ]
 
-L'archive téléchargée ```file.rar``` contient un fichier ```file.txt``` donc le contenu est présenté ci-dessous :
+L'archive téléchargée ```file.rar``` contient un fichier ```file.txt``` dont le contenu est présenté ci-dessous :
 ```console
 root@Y3HW3_Hack3r:~/HackerLab2019# cat file.txt
 Rien à voir ici?
