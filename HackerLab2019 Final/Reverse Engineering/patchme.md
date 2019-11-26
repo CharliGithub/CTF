@@ -126,7 +126,7 @@ Après une brève analyse de cette sortie de code assembleur, on peut énumérer
 2) A l'adresse ```0x00000b75```, la fonction **strcmp** est appelée pour comparer l'entrée de l'utilisateur à une certaine chaîne de caractères.
 3) Lorsque cette comparaison est fausse, le programme **jump** dans le bloc **0xbba**, où le message de sortie est **"Essaie encore""**.
 4) Lorsque cette comparaison est correcte, le programme continu son chemin et entre dans le bloc **0x00000b7c**. A ce niveau une certaine variable est initialisée à **"CWJZRXRXUYNGX"**. Cette variable est passée à une fonction *sub.strlen_953()*
-5) Cette fonction décrypte la chaîne passée en argument suivant un algorithme personnalisée. Ainsi le ```return``` de **sub.strlen_953("CWJZRXRXUYNGX")** serait le ```flag```.  
+5) Cette fonction décrypte la chaîne passée en argument suivant un algorithme personnalisé. Ainsi le ```return``` de **sub.strlen_953("CWJZRXRXUYNGX")** serait le ```flag```.  
 
 En se basant sur ces 05 points, pour avoir le ```flag ```, on aura qu'à changer l'instruction **0x00000b7c 753c jne 0xbba** en **0x00000b7c 753c jne 0x00000b7e**. Ainsi, même quand l'utilisateur va renseigner un flag incorrect, le programme continuera son chemin dans le bloc où le ```flag``` est décrypté et affiché. Pour le faire :
 ```console
