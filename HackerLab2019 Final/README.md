@@ -254,7 +254,7 @@
 	</tr>
 </table>
 
-## Authors -- Y3HW3_H4CK3R
+## Authors -- Y3HW3_H4CK3R :fire:
 * **Eliphélé AGOSSOU -- charliepy** *[@charliagossou](https://twitter.com/charliagossou)*
 * **Ezéchiel DADJO -- incognito** *[@zeck_bido](https://twitter.com/zeck_bido)*
 * **Fabrice YARAKOU -- Fabmystik** *[@YarakouF](https://twitter.com/YarakouF)*
