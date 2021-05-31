@@ -35,8 +35,3 @@
   * Python Programming
   * Loop
   * If-else
-## Authors
-* **Eliphélé AGOSSOU** *[@charliagossou](https://twitter.com/charliagossou)*
-* **Ezéchiel DADJO** *[@zeck_bido](https://twitter.com/zeck_bido)*
-* **Fabrice YARAKOU** *[@YarakouF](https://twitter.com/YarakouF)*
-* **Raymond SODJI** *[@Ray_Sdj](https://twitter.com/Ray_Sdj)*
