@@ -8,7 +8,7 @@
 ## Challenge : BTC ACCOUNT (Week 3)
 ![btc](Images/btc.png)
 
-Cette question si innocente a été le supplice de plusieurs professionels de la cybersécurité durant cette compétition.
+Cette question si innocente a été le supplice de plusieurs professionnels de la cybersécurité durant cette compétition.
 Certains se sont même demandé si le [@bjCSIRT](https://twitter.com/bjCSIRT/) détenait les **super-ordinateurs** du Bénin 😅. 
 ***
 ![btc](Images/btc1.png)
