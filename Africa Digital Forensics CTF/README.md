@@ -6,17 +6,17 @@
 
 ***
 ## Challenge : BTC ACCOUNT (Week 3)
-![btc](Files/btc.png)
+![btc](Images/btc.png)
 
 Cette question si innocente a été le supplice de plusieurs professionels de la cybersécurité durant cette compétition.
 Certains se sont même demandé si le [@bjCSIRT](https://twitter.com/bjCSIRT/) détenait les **super-ordinateurs** du Bénin 😅. 
 ***
-![btc](Files/btc1.png)
+![btc](Images/btc1.png)
 ***
 **Ironie du sort, saviez-vous qu'aucune instance du logiciel hashcat n'a été lancé pour la résolution du challenge ?** Plus simplement, on a pu accéder au contenu du ZIP sans avoir eu recours au cracking .. Haha 😂😂😂 , rassurez-vous c'est pas de la *magie noire* .. C'est de la magie **VANTABLACK** 🔥 ! Trêve de bavardage, passont aux choses sérieuses :)
 
 
-Ce challenge a en particulier mis en lumière un fichier ZIP [accountNum.zip](Files/accountNum.zip) qui avait autrefois été mentionné dans une précédente épreuve (**Finding Filenames : Week 2**). Ci-dessous la chronologie des actions faisant intervenir ce fameux fichier : 
+Ce challenge a en particulier mis en lumière un fichier ZIP [accountNum.zip](Images/accountNum.zip) qui avait autrefois été mentionné dans une précédente épreuve (**Finding Filenames : Week 2**). Ci-dessous la chronologie des actions faisant intervenir ce fameux fichier : 
 
 1. Téléchargement du fichier **accountNum.zip** depuis un serveur FTP.
 ```console
